@@ -1,0 +1,32 @@
+﻿@using CarQuoteInsurance.ViewModels
+@model List<GetQuoteVm>
+
+<div class="row no-gutters m-3">
+	<div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+		<div class="card-header text-center">
+			<h5 class="m-0">Sign-ups</h5>
+		</div>
+		<div class="card-body">
+			@foreach (var carOwner in Model)
+			{
+
+				<input type="hidden" name="Id" value="@carOwner.Id" />
+				<div class="row mb-3">
+					<div class="col-2">
+						@carOwner.FirstName
+					</div>
+					<div class="col">
+						@carOwner.LastName
+					</div>
+					<div class="col-4">
+						@carOwner.EmailAddress
+					</div>
+					<div class="col-4">
+						Payment Per Month: @carOwner.PaymentPerMonth
+					</div>
+				</div>
+
+			}
+		</div>
+	</div>
+</div>

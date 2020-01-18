@@ -1,0 +1,82 @@
+﻿<div class="row no-gutters m-3">
+	<div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+		<!--on small screnn, 12 cloumns of space, medium, 10, large, 6. mx-auot (margin on x acess set to auto on both sides so that it is centered-->
+		<div class="card-header text-center">
+			<h5 class="m-0">Take five minutes to recieve a free quote!</h5>
+		</div>
+		<div class="card-body">
+			<!-- HTML helper generating some HTML, SignUp method in Home controller, Method we are using is POST (Submitting info to the server) </-->
+			@using (Html.BeginForm("GetQuote", "Home", FormMethod.Post))
+			{
+				<div class="row no-gutters">
+					<div class="form-group col-md-12">
+						<input name="FirstName" type="text" class="form-control" placeholder="First Name" />
+					</div>
+					<div class="form-group col-md-12">
+						<input name="LastName" type="text" class="form-control" placeholder="Last Name" />
+					</div>
+					<div class="form-group col-md-12">
+						<input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" />
+					</div>
+
+					<h4 class="mb-2"> Date Of Birth: </h4>
+					<div class="form-group col-md-12">
+						<input name="DateofBirth" type="date" class="form-control" />
+					</div>
+
+					<div class="form-group col-md-12">
+						<input name="CarYear" type="text" class="form-control" placeholder="Car Year" />
+					</div>
+					<div class="form-group col-md-12">
+						<input name="CarMake" type="text" class="form-control" placeholder="Car Make" />
+					</div>
+					<div class="form-group col-md-12">
+						<input name="CarModel" type="text" class="form-control" placeholder="Car Model" />
+					</div>
+					<!-- DUI CHECK BUTTONS-->
+					<div class="form-group col-md-12 mb-0 ">
+						<h3>Have you ever had a DUI?</h3>
+					</div>
+					<div class="btn-group " data-toggle="buttons">
+						<label class="btn btn-info active">
+							@Html.RadioButton("Dui", "True", true,
+								new { id = "IsTrue" }) Yes
+						</label>
+						<label class="btn btn-info">
+							@Html.RadioButton("Dui", "False",
+								 new { id = "IsFalse" }) No
+						</label>
+					</div>
+
+
+					<div class="form-group col-md-12">
+						<input name="SpeedingTickets" type="number" min="0" class="form-control" placeholder="Number of Speeding Tickets" />
+					</div>
+					<!-- Coverage Check-->
+
+					<div class="btn-group" data-toggle="buttons">
+
+						<label class="btn btn-info active">
+
+							@Html.RadioButton("CoverageType", "True", true,
+
+								new { id = "IsTrue" }) Full Coverage
+
+						</label>
+
+						<label class="btn btn-info">
+
+							@Html.RadioButton("CoverageType", "False",
+
+								 new { id = "IsFalse" }) Liability Coverage
+
+						</label>
+
+					</div>
+
+					<button type="submit" class="btn btn-block btn-info">Submit for Quote</button>
+				</div>
+			}
+		</div>
+	</div>
+</div>

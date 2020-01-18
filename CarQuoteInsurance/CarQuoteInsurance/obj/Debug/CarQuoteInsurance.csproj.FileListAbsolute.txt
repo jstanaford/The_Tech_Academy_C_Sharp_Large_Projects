@@ -1,0 +1,2 @@
+C:\Users\Student\Desktop\The_Tech_Academy_C_Sharp_Large_Projects\CarQuoteInsurance\CarQuoteInsurance\obj\Debug\CarQuoteInsurance.csprojAssemblyReference.cache
+C:\Users\Student\Desktop\The_Tech_Academy_C_Sharp_Large_Projects\CarQuoteInsurance\CarQuoteInsurance\obj\Debug\CarQuoteInsurance.csproj.CoreCompileInputs.cache
