@@ -13,7 +13,7 @@ namespace CarQuoteInsurance.Controllers
 		// GET: Admin
 		public ActionResult Index()
 		{
-			using (CarQuoteInsuranceEntities db = new CarQuoteInsuranceEntities())
+			using (CarOwnerEntities1 db = new CarOwnerEntities1())
 			{
 				var carOwners = db.CarOwners.ToList();
 				var carOwnerVms = new List<GetQuoteVm>();

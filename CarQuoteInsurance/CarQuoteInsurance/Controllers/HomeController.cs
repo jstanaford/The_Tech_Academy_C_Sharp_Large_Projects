@@ -30,7 +30,7 @@ namespace CarQuoteInsurance.Controllers
 			else
 			{
 
-				using (CarQuoteInsuranceEntities db = new CarQuoteInsuranceEntities())
+				using (CarOwnerEntities1 db = new CarOwnerEntities1())
 				{
 					var carOwner = new CarOwner();
 					carOwner.FirstName = firstName;
@@ -46,8 +46,8 @@ namespace CarQuoteInsurance.Controllers
 
 
 
-					//My Operations for a car quote
-					
+				
+					//OPERATIONS FOR GENERATING A CAR QUOTE
 					int runningBalance = 50;
 					int years = 0;
 					years = DateTime.Now.Year - carOwner.DateOfBirth.Value.Year;
@@ -66,8 +66,7 @@ namespace CarQuoteInsurance.Controllers
 						runningBalance += 0;
 					}
 					
-					//My math for car year
-					
+					//CAR YEAR OPERATIONS
 					if (carOwner.CarYear < 2000)
 					{
 						runningBalance += 25;
@@ -81,8 +80,7 @@ namespace CarQuoteInsurance.Controllers
 						runningBalance += 0;
 					}
 					
-					//The make
-					
+					//CAR MAKER
 					if (carOwner.CarMake == "Porsche" && carOwner.CarModel != "911 Carrera")
 					{
 						runningBalance += 25;
@@ -91,13 +89,13 @@ namespace CarQuoteInsurance.Controllers
 					{
 						runningBalance += 50;
 					}
-
-					//Speeding tickets
+				
+					//SPEEDING TICKETS
 					for (int i = 0; i < carOwner.SpeedingTickets; i++)
 					{
 						runningBalance += 10;
 					}
-				
+					
 					//DUI
 					if (carOwner.DUI == true)
 					{
@@ -108,7 +106,7 @@ namespace CarQuoteInsurance.Controllers
 					{
 						runningBalance += 0;
 					}
-
+					
 					//COVERAGE
 					if (carOwner.CoverageType == true)
 					{

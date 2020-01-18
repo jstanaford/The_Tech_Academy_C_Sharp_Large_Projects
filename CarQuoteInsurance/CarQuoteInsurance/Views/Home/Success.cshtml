@@ -8,4 +8,12 @@
 	var data = ViewBag.Message;
 }
 
-<h3> Based on your information, your quote comes out to $@data.PaymentPerMonth per month</h3>
+
+<div class="card" style="width: 72rem;">
+	<div class="card-body">
+		<h5 class="card-title">Thank you for your information,</h5>
+		<h6 class="card-title"> We've processed your results and thank you for using Jacob's insurance calculator.</h6>
+<h3 class="card-text"> Based on your information, your quote will cost approximately $@data.PaymentPerMonth per month</h3>
+
+</div>
+</div>

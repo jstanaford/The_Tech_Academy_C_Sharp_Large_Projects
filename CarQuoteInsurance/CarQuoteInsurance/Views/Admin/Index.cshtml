@@ -1,10 +1,16 @@
 ﻿@using CarQuoteInsurance.ViewModels
 @model List<GetQuoteVm>
 
+<div class="jumbotron">
+	<h1 class="display-4">Welcome, Admin.</h1>
+	<p class="lead">This is a page where we keep records of those inquirying car insurance for our business needs.</p>
+</div>
+
+
 <div class="row no-gutters m-3">
 	<div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
-		<div class="card-header text-center">
-			<h5 class="m-0">Sign-ups</h5>
+		<div class="card-header text-center bg-primary">
+			<h5 class="m-0 text-white">Sign-ups</h5>
 		</div>
 		<div class="card-body">
 			@foreach (var carOwner in Model)

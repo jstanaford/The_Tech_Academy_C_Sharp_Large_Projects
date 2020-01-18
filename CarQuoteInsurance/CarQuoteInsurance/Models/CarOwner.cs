@@ -19,12 +19,12 @@ namespace CarQuoteInsurance.Models
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
         public Nullable<System.DateTime> DateOfBirth { get; set; }
-        public string CarYear { get; set; }
+        public Nullable<int> CarYear { get; set; }
         public string CarMake { get; set; }
         public string CarModel { get; set; }
         public Nullable<bool> DUI { get; set; }
-        public string CoverageType { get; set; }
-        public string SpeedingTickets { get; set; }
+        public Nullable<bool> CoverageType { get; set; }
+        public Nullable<int> SpeedingTickets { get; set; }
         public Nullable<int> PaymentPerMonth { get; set; }
     }
 }

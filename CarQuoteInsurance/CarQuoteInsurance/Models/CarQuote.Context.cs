@@ -13,10 +13,10 @@ namespace CarQuoteInsurance.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CarQuoteInsuranceEntities : DbContext
+    public partial class CarOwnerEntities1 : DbContext
     {
-        public CarQuoteInsuranceEntities()
-            : base("name=CarQuoteInsuranceEntities")
+        public CarOwnerEntities1()
+            : base("name=CarOwnerEntities1")
         {
         }
     
